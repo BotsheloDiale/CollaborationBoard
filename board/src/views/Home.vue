@@ -6,9 +6,10 @@
       title="Menu" 
       subTitle="something relevent and hopeful" 
       :MenuItems="NavDrawerMenuItems"
+      @click="showMe($event)"
     />
-    <boards/>
-    <projects/>
+    <boards v-if="position == 'boards'"/>
+    <projects v-if="position == 'projects'"/>
   </v-container>
 </template>
 
@@ -25,7 +26,8 @@ export default {
   },
   data(){
     return {
-      drawer: false,
+      drawer: true,
+      position: null,
       NavDrawerMenuItems:[
         {
           active: true,
@@ -100,6 +102,10 @@ export default {
   },
   methods: {
     checkAccess() {
+    },
+    showMe(eve) {
+      //alert(JSON.stringify(eve));
+      this.position = eve.toLowerCase();
     },
   }
 }

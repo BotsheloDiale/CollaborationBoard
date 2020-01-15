@@ -12,7 +12,7 @@
       </v-list-item-content>
     </v-list-item>
     <v-list :dense="dense" :nav="nav" >
-      <v-list-item v-for="item in MenuItems" :key="item.title" link >
+      <v-list-item v-for="item in MenuItems" :key="item.title" link :active="item.active" @click="$emit('click', item.title)">
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-icon>

@@ -9,6 +9,7 @@ Vue.component("Button", () => import("@/components/Button"));
 Vue.component("Combobox", () => import("@/components/Combobox"));
 Vue.component("Navdrawer", () => import("@/components/Navdrawer"));
 Vue.component("AccessCard", () => import("@/components/AccessCard"));
+Vue.component("BoardLayout", () => import("@/components/BoardLayout"));
 
 //Page Layouts (combines foundation components to achieve a pagelayout)
 Vue.component("boards", () => import("@/views/home/Boards"));

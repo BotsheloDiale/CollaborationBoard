@@ -6,7 +6,6 @@
       :menuOptions="MenuButtons"
       :helpStatus="helpStatus"
       :user="userData"
-      @drawerToggle="drawer=!drawer"
       app dark
     /> 
     <Loader small :overlay="loader"/>
